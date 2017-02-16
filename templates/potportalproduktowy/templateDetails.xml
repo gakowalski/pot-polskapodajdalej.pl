@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.7/template-install.dtd">
+<extension version="3.0" type="template">
+		<name>POT portal produktowy</name>
+		<version>1.0.2</version>
+		<creationDate>17 lip 2010</creationDate>
+		<author>bh, grzegorz.kowalski@pot.gov.pl</author>
+		<authorOriginal>bh</authorOriginal>
+		<authorEmail>grzegorz.kowalski@pot.gov.pl</authorEmail>
+		<authorUrl></authorUrl>
+		<copyright>Polska Organizacja Turystyczna</copyright>
+		<license></license>
+		<description>
+			<![CDATA[
+			<h2>Polska Agencja Turystyczna</h2>
+			Portal produktowy
+			<h3>Changelog</h3>
+			<b>1.0.2</b> - 2014-10<br />
+			<ul>
+			<li>* minimalizing Joomla dependendecies</li>
+			<ul>
+			<b>1.0.1</b> - 17 gru 2012<br />
+			<ul>
+			<li>* converted to Joomla 3.0.0</li>
+			<ul>
+			<b>1.0.0</b> - 17 lip 2010<br />
+			<ul>
+			<li>+ styleswitcher.</li>
+			<li>^ index.php</li>
+			</ul>
+
+			]]>  	
+    </description>
+		<files>
+			<filename>index.php</filename>
+			<filename>index.html</filename>
+			<filename>templateDetails.xml</filename>
+			<folder>images</folder>
+			<folder>css</folder>
+			<folder>js</folder>
+			<folder>html</folder>
+			<folder>fake</folder>
+		</files>
+		<positions>
+			<position>upper_menu</position>
+			<position>menu_glowne</position>
+			<position>slider</position>
+			<position>search</position>
+			<position>column_right</position>
+			<position>column_left</position>
+			<position>footer</position>
+            <position>debug</position>
+		</positions>
+</extension>

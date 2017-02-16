@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_gk</name>
+	<author>Grzegorz Kowalski</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>Copyright (C) 2013 Grzegorz Kowalski</copyright>
+	<license>Bezpłatna licencja bezterminowa dla POT</license>
+	<authorEmail>grzegorz.kowalski@wit.edu.pl</authorEmail>
+	<authorUrl></authorUrl>
+	<version>2</version>
+	<description>Komponent wyświetlania listy wyników wyszukiwania</description>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>gk.php</filename>
+	</files>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<administration>
+		<menu>Katalog produktów</menu>
+		<submenu>
+			<menu link="option=com_gk" view="default" alt="COM_GK/Default View">Konfiguracja</menu>
+			<menu link="option=com_gk">Dodaj produkt</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>gk.php</filename>
+			<folder>sql</folder>
+		</files>
+	</administration>
+</extension>
