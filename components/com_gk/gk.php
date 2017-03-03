@@ -1,4 +1,4 @@
-<?php defined('_JEXEC') or die; 
+<?php defined('_JEXEC') or die;
 
 $app 			= JFactory::getApplication();
 $db				= JFactory::getDbo();
@@ -7,10 +7,20 @@ $input = $app->input;
 
 $view_id = $input->getInt('id');
 
+function JRouteLangFix($_friendly_url) {
+	$postfix = substr($_friendly_url, -4);
+	//var_dump($postfix);
+	$result = $_friendly_url;
+	if ($postfix == '/en/' || $postfix == '/pl/') {
+		$result = substr($_friendly_url, 0, -4);
+	};
+	return $result;
+}
+
 if ($view_id) {
 	$app->redirect(JRoute::_('index.php?option=com_k2&view=item&layout=item&id='.$view_id));
 } else {
-	$title	= $_REQUEST['title']; // this gets sanitized later in the code as I have some problems with $input->get('title');
+	$title	= $_REQUEST['title'] ?? false; // this gets sanitized later in the code as I have some problems with $input->get('title');
 	$region	= $input->getInt('region');
 	$year 	= $input->getInt('year');
 	$type 	= $input->getInt('type');
@@ -42,8 +52,8 @@ if ($view_id) {
 	$results = $db->loadAssocList('id');
 
 	foreach ($results as $result) {
-		echo '<h2><a href="'. JRoute::_('index.php?option=com_k2&view=item&layout=item&id='.$result['id']) .'">'.$result['title'].'</a></h2>';
+		echo '<h2><a href="'. JRouteLangFix(JRoute::_('index.php?option=com_k2&view=item&layout=item&id='.$result['id'])) .'">'.$result['title'].'</a></h2>';
 		echo '<div id="introtext">'.$result['introtext'].'</div>';
-		if ($readon) echo '<p><a href="'. JRoute::_('index.php?option=com_k2&view=item&layout=item&id='.$result['id']) .'" class="readon">Więcej&hellip;</a></p>';
+		if ($readon) echo '<p><a href="'. JRouteLangFix(JRoute::_('index.php?option=com_k2&view=item&layout=item&id='.$result['id'])) .'" class="readon">Więcej&hellip;</a></p>';
 	}
 }

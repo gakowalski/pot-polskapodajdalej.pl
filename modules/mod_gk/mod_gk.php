@@ -20,7 +20,8 @@ $db				= JFactory::getDbo();				/* database */
 $app	= JFactory::getApplication();		/* JApp */
 $input	= $app->input;
 
-$title	= $_GET['title']; //$input->get('title');
+
+$title	= $_GET['title'] ?? false; //$input->get('title');
 $region	= $input->getInt('region');
 $year 	= $input->getInt('year');
 $type 	= $input->getInt('type');
@@ -187,9 +188,9 @@ $flashVars		= http_build_query(array(
 	<tr>
 		<td style="padding: 25px">
 			<?php if ($lang == 'pl'): ?>
-			<a href="http://pdf.polska.travel/najlepsze_produkty_turystyczne_pl">
+			<a href="https://pdf.polska.travel/najlepsze_produkty_turystyczne_pl">
 			<?php else: ?>
-			<a href="http://pdf.polska.travel/best_2008-2015_en">
+			<a href="https://pdf.polska.travel/best_2008-2015_en">
 			<?php endif; ?>
 			<img src="images/stories/produktowy/okladka_<?php echo ($lang == 'pl')? 'pl' : 'en'; ?>-200.jpg" />
 			</a>
@@ -220,8 +221,8 @@ $flashVars		= http_build_query(array(
                     <param name="menu" value="false"/>
                     <param name="wmode" value="transparent"/>
                 <!--<![endif]-->
-                    <a href="http://www.adobe.com/go/getflash">
-                        <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Pobierz odtwarzacz Adobe Flash Player" />
+                    <a href="https://www.adobe.com/go/getflash">
+                        <img src="https://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Pobierz odtwarzacz Adobe Flash Player" />
                     </a>
                 <!--[if !IE]>-->
                 </object>
@@ -260,7 +261,7 @@ $flashVars		= http_build_query(array(
 		<!-- <option value="0">(wybierz rok)</option> -->
 		<option value="0">(<?php echo ($lang == 'pl')? 'rok' : 'year';?>)</option>
 	<?php
-		for ($value = 2015; $value > 2002; $value--) {
+		for ($value = 2016; $value > 2002; $value--) {
 			if ($value == $year) {
 				echo "<option value='$value' selected>$value</option>";
 			} else {
