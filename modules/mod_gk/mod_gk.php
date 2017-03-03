@@ -20,7 +20,7 @@ $db				= JFactory::getDbo();				/* database */
 $app	= JFactory::getApplication();		/* JApp */
 $input	= $app->input;
 
-$title	= $_GET['title']; //$input->get('title'); 
+$title	= $_GET['title']; //$input->get('title');
 $region	= $input->getInt('region');
 $year 	= $input->getInt('year');
 $type 	= $input->getInt('type');
@@ -68,7 +68,7 @@ if ($lang == 'pl') {
 	$types[16] = 'Rural tourism';
 	$types[17] = 'Fortresses';
 	$types[18] = 'Castles and palaces';
-} 
+}
 
 //$regions[0] = '(wybierz województwo)';
 if ($lang == 'pl') {
@@ -112,7 +112,7 @@ if ($lang == 'pl') {
 /*
 SELECT
 COUNT(id) AS licznik,
-SUBSTR(extra_fields, 18 + LOCATE('"id":"3"', extra_fields), 2) AS region 
+SUBSTR(extra_fields, 18 + LOCATE('"id":"3"', extra_fields), 2) AS region
 FROM `j25_k2_items`
 WHERE `extra_fields` LIKE '%"id":"3"%' AND language LIKE 'pl-PL'
 GROUP BY region
@@ -142,23 +142,24 @@ $flashVars		= http_build_query(array(
 		'zpomorskie' => $searchURL.'16',
 		'region' => '0',
 
-		'pomorskievar1' 		=> ($lang == 'pl')? 16 : 16,
-		'zpomorskievar2' 		=> ($lang == 'pl')? 10 : 10,
-		'warmiavar3' 			=> ($lang == 'pl')? 8 : 8,
-		'podlaskievar4' 		=> ($lang == 'pl')? 12 : 12,
-		'kujawvar5' 			=> ($lang == 'pl')? 8 : 8,
-		'wielkopolskievar6' 	=> ($lang == 'pl')? 11 : 9,
+		// last updated: 2017-03-03 by GK
+		'dolnoslaskievar12' 	=> ($lang == 'pl')? 15 : 15,
+		'kujawvar5' 			=> ($lang == 'pl')? 10 : 10,
+		'lubelskievar10' 		=> ($lang == 'pl')? 11 : 10,
 		'lubuskievar7' 			=> ($lang == 'pl')? 9 : 9,
-		'mazowieckievar8' 		=> ($lang == 'pl')? 7 : 6,
-		'lodzkievar9' 			=> ($lang == 'pl')? 10 : 10,
-		'lubelskievar10' 		=> ($lang == 'pl')? 9 : 8,
-		'swietokrzyskievar11' 	=> ($lang == 'pl')? 12 : 10,
-		'dolnoslaskievar12' 	=> ($lang == 'pl')? 13 : 13,
-		'opolskievar13' 		=> ($lang == 'pl')? 4 : 4,
-		'slaskievar14' 			=> ($lang == 'pl')? 12 : 10,
+		'lodzkievar9' 			=> ($lang == 'pl')? 13 : 13,
 		'malopolskievar15' 		=> ($lang == 'pl')? 16 : 15,
-		'podkarpackievar16' 	=> ($lang == 'pl')? 8 : 7
-		
+		'mazowieckievar8' 		=> ($lang == 'pl')? 10 : 9,
+		'opolskievar13' 		=> ($lang == 'pl')? 5 : 5,
+		'podkarpackievar16' 	=> ($lang == 'pl')? 9 : 8,
+		'podlaskievar4' 		=> ($lang == 'pl')? 12 : 12,
+		'pomorskievar1' 		=> ($lang == 'pl')? 17 : 17,
+		'slaskievar14' 			=> ($lang == 'pl')? 14 : 12,
+		'swietokrzyskievar11' 	=> ($lang == 'pl')? 15 : 13,
+		'warmiavar3' 			=> ($lang == 'pl')? 8 : 8,
+		'wielkopolskievar6' 	=> ($lang == 'pl')? 12 : 10,
+		'zpomorskievar2' 		=> ($lang == 'pl')? 11 : 11,
+
 		/*
 		'pomorskievar1' => $results[11]['licznik'],
 		'zpomorskievar2' => $results[16]['licznik'],
@@ -188,7 +189,7 @@ $flashVars		= http_build_query(array(
 			<?php if ($lang == 'pl'): ?>
 			<a href="http://pdf.polska.travel/najlepsze_produkty_turystyczne_pl">
 			<?php else: ?>
-			<a href="http://pdf.polska.travel/best_2008-2015_en">	
+			<a href="http://pdf.polska.travel/best_2008-2015_en">
 			<?php endif; ?>
 			<img src="images/stories/produktowy/okladka_<?php echo ($lang == 'pl')? 'pl' : 'en'; ?>-200.jpg" />
 			</a>
