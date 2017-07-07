@@ -37,9 +37,9 @@ legend{color:#000;}
 /*main classes*/
 
 .wrapper{
-	width:960px;
-	margin:0px auto;
-	clear:both;
+	width: 960px;
+	margin: 0 auto;
+	clear: both;
 }
 
 .fleft{
@@ -112,12 +112,10 @@ html{
 
 body{
 	font: 12px "Arial", "Helvetica", sans-serif;
-	color:#414141;
 	font-size:13px;
 }
 
 p{
-	color:#414141;
 	margin:0.3em 0;
 }
 
@@ -278,8 +276,7 @@ strong{
 	visibility:hidden;
 	position:absolute;
 	z-index: 40000;
-	top:24px;
-	margin: -2px 0 0;
+	top: 33px;
 	background-color:#FF0931;
 }
 
@@ -313,19 +310,12 @@ strong{
 	border-bottom-left-radius: 10px;
 }
 
-#mainMenu a:last-child {
-	border-right: 1px Solid Black;
-}
-
 #mainMenu li > a,
-#mainMenu li > span
-{
-	display: block;
-	padding:0.3em 0.5em;
+#mainMenu li > span {
+	padding: 0.6em 0.8em;
 }
 
 #mainMenu ul li a{
-	/*width:100%; // commented out to fix problem with misplaced right border */
 	background:none;
 }
 
@@ -365,7 +355,6 @@ strong{
 
 #contentFlowSlider h3{
 	font-size:1.2em;
-	color:#414141;
 }
 
 /* Search */
@@ -569,10 +558,6 @@ table.category tr{
 
 
 /* Formularz kontaktowy */
-
-.bf_form_area{
-	color:#414141;
-}
 
 #BF_FORM_2 label{
 	display:block;
@@ -925,7 +910,7 @@ font-size:0.9em;
 
 .mod_gk input, .mod_gk select {
 	width: 170px;
-	margin: 0px 20px 10px 0px;
+	margin: 0 20px 10px 0;
 }
 #searchTitle {
 	width: 166px;
@@ -937,7 +922,6 @@ font-size:0.9em;
 #content {
 	border-radius: 25px;
 	background-color: #cecfce;
-	padding: 13px;
 }
 
 #product {

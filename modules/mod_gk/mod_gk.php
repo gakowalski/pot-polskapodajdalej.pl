@@ -115,10 +115,6 @@ if ($lang == 'pl') {
 			</a>
 		</td>
 		<td>
-
-		</td>
-		<!--<td width="200">-->
-		<td>
 	<form action="<?php echo JRoute::_('index.php');?>" method="GET">
 	<input type="hidden" name="option" value="com_gk" />
 	<input type="hidden" name="catid" value="<?php echo ($lang == 'pl')? 19 : 23; ?>" />

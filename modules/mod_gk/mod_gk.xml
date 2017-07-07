@@ -7,11 +7,14 @@
 	<license>Bezpłatna licencja bezterminowa dla POT</license>
 	<authorEmail>grzegorz.kowalski@wit.edu.pl</authorEmail>
 	<authorUrl></authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>Moduł wprowadzania parametrów wyszukiwania</description>
 	<files>
 		<filename module="mod_gk">mod_gk.php</filename>
 		<filename>index.html</filename>
 		<filename>mod_gk.xml</filename>
 	</files>
+	<updateservers>
+		<server type="extension" name="Polska Zobacz Więcej 2017" priority="1">https://raw.githubusercontent.com/gakowalski/pot-polskapodajdalej.pl/master/modules/mod_gk/updates.xml</server>
+	</updateservers>
 </extension>
