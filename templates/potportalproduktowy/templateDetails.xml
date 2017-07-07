@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.7/template-install.dtd">
-<extension version="3.0" type="template">
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site" method="upgrade">
 		<name>POT portal produktowy</name>
-		<version>1.0.3</version>
-		<creationDate>17 lip 2010</creationDate>
-		<author>bh, grzegorz.kowalski@pot.gov.pl</author>
+		<version>1.0.4</version>
+		<creationDate>2017-07-07</creationDate>
+		<author>grzegorz.kowalski@pot.gov.pl</author>
 		<authorOriginal>bh</authorOriginal>
 		<authorEmail>grzegorz.kowalski@pot.gov.pl</authorEmail>
 		<authorUrl></authorUrl>
 		<copyright>Polska Organizacja Turystyczna</copyright>
 		<license></license>
 		<description>
-			<![CDATA[
-			<h2>Polska Organizacja Turystyczna</h2>
-			Portal produktowy
-			New changelog: see git revisions
-			Old changelog: see oldest revision of this file
-			]]>
+			<![CDATA[ ]]>
     </description>
 		<files>
 			<filename>index.php</filename>
@@ -35,6 +30,9 @@
 			<position>column_right</position>
 			<position>column_left</position>
 			<position>footer</position>
-            <position>debug</position>
+      <position>debug</position>
 		</positions>
+		<updateservers>
+			<server type="extension" name="Polska Zobacz Więcej 2017" priority="1">https://raw.githubusercontent.com/gakowalski/pot-polskapodajdalej.pl/master/templates/potportalproduktowy/updates.xml</server>
+		</updateservers>
 </extension>
