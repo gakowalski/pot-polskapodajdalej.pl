@@ -7,7 +7,7 @@
 	<license>Bezpłatna licencja bezterminowa dla POT</license>
 	<authorEmail>grzegorz.kowalski@wit.edu.pl</authorEmail>
 	<authorUrl></authorUrl>
-	<version>1</version>
+	<version>1.0.0</version>
 	<description>Moduł wprowadzania parametrów wyszukiwania</description>
 	<files>
 		<filename module="mod_gk">mod_gk.php</filename>
