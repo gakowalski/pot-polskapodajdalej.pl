@@ -7,7 +7,7 @@
         <version>1.0.4</version>
         <infourl title="polskazobaczwiecej-2017"><![CDATA[ ]]></infourl>
         <downloads>
-            <downloadurl type="full" format="zip"><![CDATA[ ]]></downloadurl>
+          <downloadurl type="full" format="zip"><![CDATA[https://github.com/gakowalski/pot-polskapodajdalej.pl/releases/download/1.0.0/potportalproduktowy.zip]]></downloadurl>
         </downloads>
         <maintainer>Grzegorz Kowalski</maintainer>
         <maintainerurl>http://www.pot.gov.pl</maintainerurl>
