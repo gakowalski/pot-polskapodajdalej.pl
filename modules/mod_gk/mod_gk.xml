@@ -15,6 +15,6 @@
 		<filename>mod_gk.xml</filename>
 	</files>
 	<updateservers>
-		<server type="extension" name="Polska Zobacz Więcej 2017" priority="1">https://raw.githubusercontent.com/gakowalski/pot-polskapodajdalej.pl/master/modules/mod_gk/updates.xml</server>
+		<server type="extension" name="mod_gk" priority="1">https://raw.githubusercontent.com/gakowalski/pot-polskapodajdalej.pl/master/modules/mod_gk/updates.xml</server>
 	</updateservers>
 </extension>

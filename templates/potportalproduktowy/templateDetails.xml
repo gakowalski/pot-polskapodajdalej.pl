@@ -20,7 +20,6 @@
 			<folder>images</folder>
 			<folder>css</folder>
 			<folder>html</folder>
-			<folder>fake</folder>
 		</files>
 		<positions>
 			<position>upper_menu</position>
@@ -33,6 +32,6 @@
       <position>debug</position>
 		</positions>
 		<updateservers>
-			<server type="extension" name="Polska Zobacz Więcej 2017" priority="1">https://raw.githubusercontent.com/gakowalski/pot-polskapodajdalej.pl/master/templates/potportalproduktowy/updates.xml</server>
+			<server type="extension" name="POT portal produktowy" priority="1">https://raw.githubusercontent.com/gakowalski/pot-polskapodajdalej.pl/master/templates/potportalproduktowy/updates.xml</server>
 		</updateservers>
 </extension>

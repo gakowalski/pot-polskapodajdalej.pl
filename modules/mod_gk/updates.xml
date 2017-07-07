@@ -5,7 +5,7 @@
         <element>mod_gk</element>
         <type>module</type>
         <version>1.0.1</version>
-        <infourl title="polskazobaczwiecej-2017"><![CDATA[ ]]></infourl>
+        <infourl title="mod_gk"><![CDATA[ ]]></infourl>
         <downloads>
             <downloadurl type="full" format="zip"><![CDATA[https://github.com/gakowalski/pot-polskapodajdalej.pl/releases/download/1.0.0/mod_gk.zip]]></downloadurl>
         </downloads>
