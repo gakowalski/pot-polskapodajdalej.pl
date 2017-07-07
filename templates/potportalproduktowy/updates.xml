@@ -4,7 +4,7 @@
         <description></description>
         <element>potportalproduktowy</element>
         <type>template</type>
-        <version>1.0.4</version>
+        <version>1.0.5</version>
         <infourl title="potportalproduktowy"><![CDATA[ ]]></infourl>
         <downloads>
           <downloadurl type="full" format="zip"><![CDATA[https://github.com/gakowalski/pot-polskapodajdalej.pl/releases/download/1.0.0/potportalproduktowy.zip]]></downloadurl>

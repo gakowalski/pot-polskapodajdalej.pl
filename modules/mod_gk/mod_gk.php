@@ -114,11 +114,11 @@ if ($lang == 'pl') {
 			<img src="images/stories/produktowy/okladka_<?php echo ($lang == 'pl')? 'pl' : 'en'; ?>-200.jpg" />
 			</a>
 		</td>
-		<td>
+		<td style="padding: 25px">
 	<form action="<?php echo JRoute::_('index.php');?>" method="GET">
 	<input type="hidden" name="option" value="com_gk" />
 	<input type="hidden" name="catid" value="<?php echo ($lang == 'pl')? 19 : 23; ?>" />
-	<input type="text" name="title" id="searchTitle" value="<?php if ($title) echo urldecode($title); ?>"/>
+	<input type="text" name="title" placeholder="<?php echo ($lang == 'pl')? '(Nazwa)' : '(Name)'; ?>" value="<?php if ($title) echo urldecode($title); ?>"/>
 	<select name="region" id="selectRegion" class="product-search-region">
 	<?php
 		foreach ($regions as $index => $value) {
@@ -154,7 +154,7 @@ if ($lang == 'pl') {
 		}
 	?>
 	</select>
-	<input type="submit" class="submit" id="submitSzukaj" value="<?php echo ($lang == 'pl')? 'Szukaj' : 'Search'; ?>" />
+	<input type="submit" class="submit" value="<?php echo ($lang == 'pl')? 'Szukaj' : 'Search'; ?>" />
 	</form>
 		</td>
 	</tr>

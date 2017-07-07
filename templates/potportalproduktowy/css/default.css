@@ -1,13 +1,9 @@
 @charset "utf-8";
-/* CSS Document */
-
 /*reset*/
 
 html{color:#000;background:#FFF;}
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img,a{margin:0;padding:0;outline-style:none;}
-
-/*table{border-collapse:collapse;border-spacing:0;}*/
 
 fieldset,img{border:0;}
 
@@ -112,7 +108,7 @@ html{
 
 body{
 	font: 12px "Arial", "Helvetica", sans-serif;
-	font-size:13px;
+	font-size: 13px;
 }
 
 p{
@@ -909,14 +905,8 @@ font-size:0.9em;
 }
 
 .mod_gk input, .mod_gk select {
-	width: 170px;
-	margin: 0 20px 10px 0;
-}
-#searchTitle {
-	width: 166px;
-}
-#submitSzukaj {
-	height: 50px;
+	margin: 15px;
+	padding: 15px;
 }
 
 #content {
@@ -925,7 +915,6 @@ font-size:0.9em;
 }
 
 #product {
-	/*margin: 25px;*/
 	line-height: 17px;
 	border-spacing: 25px;
 }

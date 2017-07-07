@@ -1,38 +1,63 @@
 <?php
 defined('_JEXEC') or die;
 
-/* The following line loads the MooTools JavaScript Library */
-JHtml::_('behavior.framework', true);
+$app      = JFactory::getApplication();
+$user     = JFactory::getUser();
+$doc      = JFactory::getDocument();
+$lang     = JFactory::getLanguage();
+$menu     = $app->getMenu();
+$option   = $app->input->getCmd('option', '');
+$view     = $app->input->getCmd('view', '');
+$layout   = $app->input->getCmd('layout', '');
+$task     = $app->input->getCmd('task', '');
+$itemid   = $app->input->getCmd('Itemid', '');
+$sitename = $app->get('sitename');
+$cookie   = $app->input->cookie;
 
-/* The following line gets the application object for things like displaying the site name */
-$app = JFactory::getApplication();
+$frontpage_enabled = ($menu->getActive() == $menu->getDefault($lang->getTag()));
+$template_path = $this->baseurl.'/templates/'.$this->template;
+
+$this->setGenerator(null);
+$this->setHtml5(true);
 $this->setBase('');
-?>
-<?php echo '<?'; ?>xml version="1.0" encoding="<?php echo $this->_charset ?>"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
 
+$doc->addStyleSheet($template_path . '/css/default.css');
+//$doc->addScript($template_path . '/js/default.js');
+$body_classes =
+  'site '
+  . $option
+	. ' view-' . $view
+	. ($layout ? ' layout-' . $layout : ' no-layout')
+	. ($task ? ' task-' . $task : ' no-task')
+	. ($itemid ? ' itemid-' . $itemid : '')
+  . ($this->direction === 'rtl' ? ' rtl' : '')
+  . ($frontpage_enabled == true? ' frontpage' : ' not-frontpage');
+?>
+<!DOCTYPE html>
+<html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
     <head>
-	<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KVCWKPT');</script>
-<!-- End Google Tag Manager -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Google Tag Manager -->
+        <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KVCWKPT');
+        </script>
+        <!-- End Google Tag Manager -->
+
         <jdoc:include type="head" />
-        <link rel="stylesheet" href="<?php echo JURI::base(true); ?>/templates/<?php echo $this->template; ?>/css/merged.css" type="text/css" /> 
-        <link rel="stylesheet" href="<?php echo JURI::base(true); ?>/modules/mod_imageslider/js/contentflow/contentflow.css" type="text/css" />
-        <script type="text/javascript" src="<?php echo JURI::base(true); ?>/modules/mod_imageslider/js/contentflow/contentflow.js"></script>
+
         <script src="<?php echo JURI::base(true); ?>/media/lightbox/js/jquery-1.7.2.min.js"></script>
         <script src="<?php echo JURI::base(true); ?>/media/lightbox/js/lightbox.js"></script>
         <link href="<?php echo JURI::base(true); ?>/media/lightbox/css/lightbox.css" rel="stylesheet" />
     </head>
 
-    <body id="home">
+    <body id="home" class="<?php echo $body_classes; ?>">
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVCWKPT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVCWKPT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
         <div id="header">
 
@@ -50,7 +75,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div id="menuMain" class="right">
                         <!-- Main Menu -->
-                        <jdoc:include type="modules" name="menu_glowne" style="xhtml" />
+                        <jdoc:include type="modules" name="menu_glowne" style="none" />
                     </div>
 
                 </div>
@@ -63,14 +88,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div id="slider" class="wrapper">
             <!-- Picture slider above content -->
-            <jdoc:include type="modules" name="slider" style="xhtml" />
+            <jdoc:include type="modules" name="slider" style="none" />
             <div class="clear"></div>
         </div>
 
         <div id="search" class="wrapper">
             <!-- Product search -->
-            <jdoc:include type="modules" name="search" style="xhtml" />
-            <div class="clear"></div>    
+            <jdoc:include type="modules" name="search" style="none" />
+            <div class="clear"></div>
         </div>
 
 
@@ -80,7 +105,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div id="leftColumn" class="fleft">
 
                     <!-- Lewa kolumna -->
-                    <jdoc:include type="modules" name="column_left" style="xhtml" />
+                    <jdoc:include type="modules" name="column_left" style="none" />
 
                 </div>
             <?php endif; ?>
@@ -89,25 +114,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div id="rightColumn" class="fright">
 
                     <!-- Prawa kolumna -->
-                    <jdoc:include type="modules" name="column_right" style="xhtml" />
+                    <jdoc:include type="modules" name="column_right" style="none" />
 
                 </div>
             <?php endif; ?>
 
-
             <div id="textCont<?php if (!$this->countModules('column_left | column_right')) echo 'NoSidebar'; ?>">
-
-                <!-- Komponent -->
-                <jdoc:include type="component" style="xhtml" />
-
+                <jdoc:include type="component" style="none" />
             </div>
-
             <div class="clear"><!-- Clear line --></div>
-
         </div>
 
         <div id="footerCont">
-
             <div class="wrapper">
 
                 <table border="0" cellpadding="0" width="100%">
@@ -119,9 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </table>
 
                 <div class="clear"></div>
-
-            </div>            
-
+            </div>
         </div>
 
         <jdoc:include type="modules" name="debug" />
@@ -135,8 +151,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 POTCounter.SendInfo();
             });
         </script>
-
-        <!--HTML LOADED-->
     </body>
-
 </html>
