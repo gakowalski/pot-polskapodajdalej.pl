@@ -87,6 +87,10 @@ legend{color:#000;}
 	float:left;
 }
 
+#textContNoSidebar{
+	padding: 1em;
+}
+
 #leftColumn{
 	width:210px;
 	margin-right:20px;
@@ -104,14 +108,15 @@ legend{color:#000;}
 
 html{
 	background-color: rgb(227,226,225);
+	font-family: "Arial", "Helvetica", sans-serif;
+	font-size: 10px;
 }
 
 body{
-	font: 12px "Arial", "Helvetica", sans-serif;
-	font-size: 13px;
+	font-size: 1.3em;
 }
 
-p{
+p {
 	margin:0.3em 0;
 }
 
@@ -119,7 +124,7 @@ ul{
 	list-style:square outside none;
 }
 
-li{
+li {
 	margin:0.4em 0;
 	list-style:none;
 }
@@ -158,10 +163,11 @@ a:hover {
 #content .componentheading, #content h3{
 	border-left:3px solid #FF0931;
 	color:#FF0931;
-	font:bold 12px "Arial", "Helvetica", sans-serif;
+	font-weight:bold;
+  font-size: 12px;
 	margin:0 0 0.5em;
 	padding:0 0 0 1em;
-	text-transform:uppercase;
+	text-transform: uppercase;
 }
 
 #middleColumn h3{
@@ -174,8 +180,7 @@ a:hover {
 div.itemHeader h2.itemTitle {
 	color:#FF0931;
 	font-weight:bold;
-    font-size: 14px;
-    font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 14px;
 	margin:1em 1em 0.5em 1em;
 	padding: 0;
 	line-height: 100%;
@@ -225,8 +230,6 @@ strong{
 	margin: 0 0.5em 0 0;
 	border-left:1px #A4A7A9 solid;
 }
-
-
 
 #upperMenu li.item1{
 	border:none;
@@ -344,13 +347,6 @@ strong{
 
 #menuFooter a:hover{
 	color:#555;
-}
-
-
-/* Slider */
-
-#contentFlowSlider h3{
-	font-size:1.2em;
 }
 
 /* Search */
@@ -481,135 +477,7 @@ table.category tr{
 }
 
 
-/* Formularz zgłoszeniowy */
-
-#BF_FORM_1 .bf_form_row{
-	clear:both;
-	margin:0 auto;
-	padding:10px 0;
-	width:400px;
-}
-
-#BF_FORM_1 .bf_form_row label{
-	float:left;
-}
-
-#BF_FORM_1 .bf_form_row input, #BF_FORM_1 .bf_form_row select, #BF_FORM_1 .bf_form_row textarea{
-	float:right;
-}
-
-#BF_FORM_1 .bf_form_row textarea{
-	width:350px;
-}
-
-#BF_FORM_1 .bf_form_row select#produktturystyczny{
-	width:270px;
-}
-
-#BF_FORM_1 .bf_form_row select#rodzajturystyki{
-	width:290px;
-}
-
-#BF_FORM_1 .bf_form_row select#region{
-	width:340px;
-}
-
-#BF_FORM_1 .bf_form_row input#image_copy_copy, #BF_FORM_1 .bf_form_row input#image_copy, #BF_FORM_1 .bf_form_row input#image{
-	width:335px;
-}
-
-#BF_FORM_1 .bf_form_row input#name{
-	width:210px;
-}
-
-#BF_FORM_1 .bf_form_row input#email{
-	width:340px;
-}
-
-#BF_FORM_1 .bf_form_row input#longitude{
-	width:255px;
-}
-
-#BF_FORM_1 .bf_form_row input#latitude{
-	width:240px;
-}
-
-#BF_FORM_1 #form_submit_button{
-	border:1px solid #CCCCCC;
-	color:#000000;
-	display:block;
-	margin:0 auto;
-	padding:3px 5px;
-	width:100px;
-}
-
-#BF_FORM_1 #form_submit_button img{
-	display:none;
-}
-
-#BF_FORM_1 #form_submit_button:hover{
-	background-color:#FF0931;
-	color:#fff;
-}
-
-
-/* Formularz kontaktowy */
-
-#BF_FORM_2 label{
-	display:block;
-	float:left;
-	width:120px;
-}
-
-#BF_FORM_2 label.bf_layout_checkbox{
-	width:auto;
-}
-
-#BF_FORM_2 label.bf_layout_checkbox input{
-	width:auto;
-	margin-left:120px;
-}
-
-#BF_FORM_2 select{
-	width:190px;
-}
-
-#BF_FORM_2 textarea{
-	width:350px
-}
-
-#BF_FORM_2 input{
-	width:190px;
-}
-
-#BF_FORM_2 input#send{
-	width:100px;
-	display:block;
-	margin:0 auto;
-}
-
-#BF_FORM_2 input#send:hover{
-	background-color:#FF0931;
-	color:#fff;
-}
-
-#BF_FORM_2 .bf_form_row{
-	clear:both;
-	margin-bottom:10px;
-}
-
-.required{
-	color:#FF0000;
-	font-size:1.5em;
-	line-height:0.9em;
-	margin-left:3px;
-	vertical-align:top;
-}
-
-
 /* Lista konkursów */
-
-
 
 .form_links{
 	float:right;

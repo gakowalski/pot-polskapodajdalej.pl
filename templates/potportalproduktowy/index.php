@@ -38,10 +38,6 @@ $body_classes =
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <jdoc:include type="head" />
-
-        <script src="<?php echo JURI::base(true); ?>/media/lightbox/js/jquery-1.7.2.min.js"></script>
-        <script src="<?php echo JURI::base(true); ?>/media/lightbox/js/lightbox.js"></script>
-        <link href="<?php echo JURI::base(true); ?>/media/lightbox/css/lightbox.css" rel="stylesheet" />
     </head>
 
     <body id="home" class="<?php echo $body_classes; ?>">
