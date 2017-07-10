@@ -37,17 +37,6 @@ $body_classes =
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Google Tag Manager -->
-        <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KVCWKPT');
-        </script>
-        <!-- End Google Tag Manager -->
-
         <jdoc:include type="head" />
 
         <script src="<?php echo JURI::base(true); ?>/media/lightbox/js/jquery-1.7.2.min.js"></script>
@@ -56,13 +45,8 @@ $body_classes =
     </head>
 
     <body id="home" class="<?php echo $body_classes; ?>">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVCWKPT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
         <div id="header">
-
             <div class="wrapper">
-
                 <table border="0" cellpadding="0" width="100%">
                     <tr align="center">
                         <td width="33%"><a href="<?php echo JURI::base(false); ?>"><img style="margin: 5px 0px 5px 0px" src="images/stories/produktowy/logo/logo-PPD-2016.png" width="247" height="80" /></a></td>
@@ -72,18 +56,13 @@ $body_classes =
                 </table>
 
                 <div class="fright">
-
                     <div id="menuMain" class="right">
                         <!-- Main Menu -->
                         <jdoc:include type="modules" name="menu_glowne" style="none" />
                     </div>
-
                 </div>
-
                 <div class="clear"></div>
-
             </div>
-
         </div>
 
         <div id="slider" class="wrapper">
