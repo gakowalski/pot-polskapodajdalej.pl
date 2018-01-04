@@ -4,7 +4,7 @@
         <description></description>
         <element>mod_gk</element>
         <type>module</type>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
         <infourl title="mod_gk"><![CDATA[ ]]></infourl>
         <downloads>
             <downloadurl type="full" format="zip"><![CDATA[https://github.com/gakowalski/pot-polskapodajdalej.pl/releases/download/1.0.0/mod_gk.zip]]></downloadurl>

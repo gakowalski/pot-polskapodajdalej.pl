@@ -4,6 +4,9 @@ $app	= JFactory::getApplication();
 $db		= JFactory::getDbo();
 $input	= $app->input;
 
+$document = JFactory::getDocument();
+$document->addStyleSheet('administrator'.DS.'components'.DS.'com_gk'.DS.DS.'com_gk.css');
+
 $task	= $input->getInt('task', 1);
 
 function mysql_escape($inp) {
@@ -206,8 +209,8 @@ Brak możliwości konfiguracji wyszukiwania w tej wersji komponentu.</h1><?php
 		$regions[15] = 'wielkopolskie';
 		$regions[16] = 'zachodniopomorskie';
 ?>
-<form action="?option=com_gk&task=2" method="post">
-<div style="float:left;padding:10px">
+<form class="com_gk" action="?option=com_gk&task=2" method="post">
+<div>
 	<fieldset>
 		<legend>Text content</legend>
 		<label for="textTitle">Title</label>
@@ -220,7 +223,7 @@ Brak możliwości konfiguracji wyszukiwania w tej wersji komponentu.</h1><?php
 		<textarea name="address" id="textAddress" required></textarea>
 	</fieldset>
 </div>
-<div style="float:left; padding:10px">
+<div>
 	<fieldset>
 		<legend>Attributes</legend>
 		<label for="selectRegion">Region</label>
@@ -259,7 +262,7 @@ Brak możliwości konfiguracji wyszukiwania w tej wersji komponentu.</h1><?php
 		</select>
 	</fieldset>
 </div>
-<div style="float:left;padding:10px">
+<div>
 	<fieldset>
 		<legend>For special purposes</legend>
 		<label for="newId">New ID</label>
@@ -416,4 +419,4 @@ Brak możliwości konfiguracji wyszukiwania w tej wersji komponentu.</h1><?php
 
 ?>
 <hr>
-<p align="right"><a href="mailto:grzegorz.kowalski@wit.edu.pl">Grzegorz Kowalski</a></p>
+<p align="right"><a href="mailto:grzegorz.kowalski@pot.gov.pl">Grzegorz Kowalski</a></p>

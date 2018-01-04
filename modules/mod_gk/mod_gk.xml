@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.0" client="site" method="upgrade">
+<extension type="module" version="3.[0-9]" client="site" method="upgrade">
 	<name>Wyszukiwarka produktow turystycznych</name>
 	<author>Grzegorz Kowalski</author>
 	<creationDate>January 2013</creationDate>
@@ -7,12 +7,13 @@
 	<license>Bezpłatna licencja bezterminowa dla POT</license>
 	<authorEmail>grzegorz.kowalski@wit.edu.pl</authorEmail>
 	<authorUrl></authorUrl>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<description>Moduł wprowadzania parametrów wyszukiwania</description>
 	<files>
 		<filename module="mod_gk">mod_gk.php</filename>
 		<filename>index.html</filename>
 		<filename>mod_gk.xml</filename>
+		<filename>mod_gk.css</filename>
 	</files>
 	<updateservers>
 		<server type="extension" name="mod_gk" priority="1">https://raw.githubusercontent.com/gakowalski/pot-polskapodajdalej.pl/master/modules/mod_gk/updates.xml</server>
