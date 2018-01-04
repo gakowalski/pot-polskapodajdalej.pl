@@ -1,18 +1,19 @@
 ﻿<?php
 defined('_JEXEC') or die;
 
-$extension_name = 'mod_gk';		/* same as folder name, ex. "mod_foo" */
-/* default joomla parameters */
-$header_class	= $params->get('header_class');		/* string, so called 'moduleclass_sfx', ex. "_myown" or empty */
-
 /* special objects */
+$db			= JFactory::getDbo();				/* database */
+$app		= JFactory::getApplication();		/* JApp */
 $input	= $app->input;
 
+$document = JFactory::getDocument();
+$document->addStyleSheet('modules'.DS.'mod_gk'.DS.'mod_gk.css');
 
 $title	= $_GET['title'] ?? false; //$input->get('title');
 $region	= $input->getInt('region');
 $year 	= $input->getInt('year');
 $type 	= $input->getInt('type');
+$lang		= (JFactory::getLanguage()->getTag() == 'pl-PL'? 'pl' : 'en');
 
 //$types[0] = '(wybierz typ turystyki)';
 if ($lang == 'pl') {
@@ -97,8 +98,10 @@ if ($lang == 'pl') {
 }
 
 ?>
+<div class="mod_gk">
 	<table border="0" cellspacing="0" width="100%">
 	<tr>
+		<td>
 			<?php if ($lang == 'pl'): ?>
 			<a href="https://pdf.polska.travel/najlepsze_produkty_turystyczne_pl">
 			<?php else: ?>
@@ -107,6 +110,7 @@ if ($lang == 'pl') {
 			<img src="images/stories/produktowy/okladka_<?php echo ($lang == 'pl')? 'pl' : 'en'; ?>-200.jpg" />
 			</a>
 		</td>
+		<td>
 	<form action="<?php echo JRoute::_('index.php');?>" method="GET">
 	<input type="hidden" name="option" value="com_gk" />
 	<input type="hidden" name="catid" value="<?php echo ($lang == 'pl')? 19 : 23; ?>" />
@@ -137,6 +141,7 @@ if ($lang == 'pl') {
 		<!-- <option value="0">(wybierz rok)</option> -->
 		<option value="0">(<?php echo ($lang == 'pl')? 'rok' : 'year';?>)</option>
 	<?php
+		for ($value = 2017; $value > 2002; $value--) {
 			if ($value == $year) {
 				echo "<option value='$value' selected>$value</option>";
 			} else {
