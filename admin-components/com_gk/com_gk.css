@@ -1,4 +1,15 @@
 form.com_gk > div {
   float:left;
   padding:10px;
+  width: 25%;
+}
+
+form.com_gk > div:first-child {
+  width: 50%;
+}
+
+#textTitle,
+#textAbstract,
+#textBody {
+  width: 100%;
 }

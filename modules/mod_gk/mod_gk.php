@@ -7,7 +7,7 @@ $app		= JFactory::getApplication();		/* JApp */
 $input	= $app->input;
 
 $document = JFactory::getDocument();
-$document->addStyleSheet('modules'.DS.'mod_gk'.DS.'mod_gk.css');
+$document->addStyleSheet(DS.'modules'.DS.'mod_gk'.DS.'mod_gk.css');
 
 $title	= $_GET['title'] ?? false; //$input->get('title');
 $region	= $input->getInt('region');

@@ -5,7 +5,7 @@ $db		= JFactory::getDbo();
 $input	= $app->input;
 
 $document = JFactory::getDocument();
-$document->addStyleSheet('administrator'.DS.'components'.DS.'com_gk'.DS.DS.'com_gk.css');
+$document->addStyleSheet(DS.'administrator'.DS.'components'.DS.'com_gk'.DS.'com_gk.css');
 
 $task	= $input->getInt('task', 1);
 
@@ -161,7 +161,8 @@ Brak możliwości konfiguracji wyszukiwania w tej wersji komponentu.</h1><?php
 				//echo $query;
 				$db->setQuery($query);
 				$db->query();
-				echo "<h1>Database query for $title has been generated and executed.</h1>";
+				$last_id = $db->insertid();
+				echo "<h1>Database query for $title has been generated and executed (id: $last_id).</h1>";
 		} else {
 			echo '<h1>Incomplete data, cannot generate correct SQL query.</h1>';
 		}
@@ -216,11 +217,11 @@ Brak możliwości konfiguracji wyszukiwania w tej wersji komponentu.</h1><?php
 		<label for="textTitle">Title</label>
 		<input type="text" name="title" id="textTitle" required>
 		<label for="textAbstract">Abstract</label>
-		<textarea name="abstract" id="textAbstract" required></textarea>
+		<textarea name="abstract" id="textAbstract" required rows="4"></textarea>
 		<label for="textBody">Body</label>
-		<textarea name="body" id="textBody" required></textarea>
+		<textarea name="body" id="textBody" required rows="20"></textarea>
 		<label for="textAddress">Address</label>
-		<textarea name="address" id="textAddress" required></textarea>
+		<textarea name="address" id="textAddress" required rows="1"></textarea>
 	</fieldset>
 </div>
 <div>
