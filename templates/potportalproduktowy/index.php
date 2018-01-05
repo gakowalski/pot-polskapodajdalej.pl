@@ -61,17 +61,21 @@ $body_classes =
             </div>
         </div>
 
+        <?php if ($this->countModules('slider')): ?>
         <div id="slider" class="wrapper">
             <!-- Picture slider above content -->
             <jdoc:include type="modules" name="slider" style="none" />
             <div class="clear"></div>
         </div>
+        <?php endif; ?>
 
-        <div id="search" class="wrapper">
-            <!-- Product search -->
-            <jdoc:include type="modules" name="search" style="none" />
-            <div class="clear"></div>
-        </div>
+        <?php if ($this->countModules('search')): ?>
+          <div id="search" class="wrapper">
+              <!-- Product search -->
+              <jdoc:include type="modules" name="search" style="none" />
+              <div class="clear"></div>
+          </div>
+        <?php endif; ?>
 
 
         <div id="content" class="wrapper">
