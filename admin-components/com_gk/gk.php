@@ -301,6 +301,10 @@ Brak możliwości konfiguracji wyszukiwania w tej wersji komponentu.</h1><?php
 			}
 		}
 ?>
+	<p>
+		Konflikt aliasów jest wtedy, gdy dwa różne obiekty <u>w tym samym języku</u> opatrzone są tym samym aliasem.
+	</p>
+	<hr>
 		<form action="?option=com_gk&task=3" method="get">
 			<label for="newId">ID</label>
 				<input type="text" name="id" id="id" required>
