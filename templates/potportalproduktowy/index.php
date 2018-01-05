@@ -47,7 +47,7 @@ $body_classes =
                     <tr align="center">
                         <td width="33%"><a href="<?php echo JURI::base(false); ?>"><img style="margin: 5px 0px 5px 0px" src="images/stories/produktowy/logo/logo-PPD-2016.png" width="247" height="80" /></a></td>
                         <td width="33%"></td>
-                        <td width="33%"><a href="http://www.msport.gov.pl/" target="_blank"><img height="60" src="//polska.travel/images/stories/polskatravel/Polska/MSIT_pl.png" alt="MSIT pl"></a></td>
+                        <td width="33%"><a href="https://www.msit.gov.pl/" target="_blank"><img height="60" src="//polska.travel/images/stories/polskatravel/Polska/MSIT_pl.png" alt="MSIT pl"></a></td>
                     </tr>
                 </table>
 
@@ -107,7 +107,7 @@ $body_classes =
                     <tr align="center" valign="top">
                         <td><jdoc:include type="modules" name="footer" style="xhtml" /></td>
                         <td><img src="images/stories/produktowy/logo/mala.png" height="74" width="530" /></td>
-                        <td><span class="copyrights">(c) <?php echo date('Y'); ?> Polska Organizacja Turystyczna</span</td>
+                        <td><span class="copyrights">&copy; <?php echo date('Y'); ?> Polska Organizacja Turystyczna</span</td>
                     </tr>
                 </table>
 

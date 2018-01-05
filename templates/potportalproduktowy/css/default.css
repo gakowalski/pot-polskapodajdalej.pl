@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*reset*/
 
-html{color:#000;background:#FFF;}
+html{color:#000}
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img,a{margin:0;padding:0;outline-style:none;}
 
@@ -108,16 +108,17 @@ legend{color:#000;}
 
 html{
 	background-color: rgb(227,226,225);
-	font-family: "Arial", "Helvetica", sans-serif;
-	font-size: 10px;
+	font-family: "Lato", "Arial", "Helvetica", sans-serif;
+	font-size: 12px;
 }
 
 body{
-	font-size: 1.3em;
+	font-size: 1.3rem;
 }
 
 p {
-	margin:0.3em 0;
+	margin: 1.5rem 0;
+	line-height: 1.5;
 }
 
 ul{
@@ -148,7 +149,7 @@ a:hover {
 #content a.readon, #content a.readmore, .k2ReadMore {
 	background:url(../images/more.png) no-repeat scroll 100% 50% rgb(107,207,0);
 	color:#000;
-	font-size:10px;
+	font-size:1rem;
 	padding:0.2em 18px 0.2em 0.4em;
 	white-space:nowrap;
 	text-decoration:none;
@@ -164,7 +165,7 @@ a:hover {
 	border-left:3px solid #FF0931;
 	color:#FF0931;
 	font-weight:bold;
-  font-size: 12px;
+  font-size: 1.2rem;
 	margin:0 0 0.5em;
 	padding:0 0 0 1em;
 	text-transform: uppercase;
@@ -180,7 +181,7 @@ a:hover {
 div.itemHeader h2.itemTitle {
 	color:#FF0931;
 	font-weight:bold;
-  font-size: 14px;
+  font-size: 1.4rem;
 	margin:1em 1em 0.5em 1em;
 	padding: 0;
 	line-height: 100%;
@@ -202,9 +203,9 @@ strong{
 
 .moduletable_welcome p{
 	color:#FF0931;
-	font-size:12px;
+	font-size:1.2rem;
 	font-weight:bold;
-	line-height:1.5em;
+	line-height:1.5rem;
 	overflow: hidden;
 	text-align: center;
 	text-transform:uppercase;
@@ -225,10 +226,9 @@ strong{
 
 #upperMenu li{
 	display:inline;
-	font-size:11px;
+	font-size:1.1rem;
 	padding: 0 0 0 0.5em;
 	margin: 0 0.5em 0 0;
-	border-left:1px #A4A7A9 solid;
 }
 
 #upperMenu li.item1{
@@ -266,7 +266,7 @@ strong{
 	display:block;
 	float:left;
 	position:relative;
-	font-size:14px;
+	font-size:1.4rem;
 	margin: 0;
 }
 
@@ -275,7 +275,7 @@ strong{
 	visibility:hidden;
 	position:absolute;
 	z-index: 40000;
-	top: 33px;
+	top: 2.6rem;
 	background-color:#FF0931;
 }
 
@@ -286,7 +286,7 @@ strong{
 #mainMenu ul li{
 	display:block;
 	float: none;
-	font-size:1em;
+	font-size:1.4rem;
 	border-top:1px #fff dotted;
 	margin:0;
 }
@@ -297,7 +297,6 @@ strong{
 	color:#FFF;
 	text-transform:uppercase;
 	text-decoration:none;
-	border-right: 1px Solid Black;
 }
 
 #mainMenu li:first-child > span {
@@ -311,7 +310,7 @@ strong{
 
 #mainMenu li > a,
 #mainMenu li > span {
-	padding: 0.6em 0.8em;
+	padding: 0.6rem 0.8rem;
 }
 
 #mainMenu ul li a{
@@ -330,7 +329,7 @@ strong{
 
 #menuFooter li{
 	display:inline;
-	font-size:11px;
+	font-size:1.1rem;
 	padding: 0 0 0 0.5em;
 	margin: 0 0.5em 0 0;
 	border-left:1px #7E7E7E solid;
@@ -442,7 +441,7 @@ p.counter{
 	color:#fff;
 	display:block;
 	float:left;
-	font-size:11px;
+	font-size:1.1rem;
 	margin:0 3px;
 	padding:0.2em 0.5em;
 }
@@ -465,9 +464,8 @@ span.pagitem{
 }
 
 .copyrights{
-	font-size:11px;
+	font-size:1.1rem;
 	color:#7E7E7E ;
-	margin:0;
 }
 
 /* Lista artykułów w kategorii */
@@ -517,7 +515,7 @@ table.category tr{
 .contests_list li{
 	clear:both;
 	padding:5px 0;
-	font-size:11px;
+	font-size:1.1rem;
 	overflow:hidden;
 	width:100%;
 }
@@ -530,7 +528,7 @@ table.category tr{
 .contests_list h4{
 	float:left;
 	margin-top:0;
-	font-size:13px;
+	font-size:1.3rem;
 }
 
 .contests_list strong{
@@ -637,7 +635,7 @@ table.category tr{
 .moduletable_contsetsearch h3{
 	color:#FF0931;
 	float:left;
-	font-size:10px;
+	font-size:1rem;
 	font-weight:bold;
 	line-height:2.5em;
 	margin-right:20px;
@@ -739,7 +737,7 @@ list-style:none;
 background:url(../images/bullet_green_arrow.png) no-repeat 0 12px;
 display:block;
 padding:5px 5px 5px 15px;
-font-size:0.9em;
+font-size:0.9rem;
 }
 
 .itemAuthor,
@@ -767,7 +765,7 @@ font-size:0.9em;
 }
 
 #tytul {
-	font-size: 14pt;
+	font-size: 1.4rem;
 	color: #FF0931;
 	font-weight: bold;
 }
