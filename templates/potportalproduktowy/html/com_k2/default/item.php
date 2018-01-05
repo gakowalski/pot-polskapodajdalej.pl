@@ -10,6 +10,48 @@
 // no direct access
 defined('_JEXEC') or die;
 
+/**
+ * Turn all URLs in clickable links.
+ * Source: https://gist.github.com/jasny/2000705
+ *
+ * @param string $value
+ * @param array  $protocols  http/https, ftp, mail, twitter
+ * @param array  $attributes
+ * @param string $mode       normal or all
+ * @return string
+ */
+function linkify($value, $protocols = array('http', 'mail'), array $attributes = array())
+{
+		// Link attributes
+		$attr = '';
+		foreach ($attributes as $key => $val) {
+				$attr .= ' ' . $key . '="' . htmlentities($val) . '"';
+		}
+
+		$links = array();
+
+		// Extract existing links and tags
+		$value = preg_replace_callback('~(<a .*?>.*?</a>|<.*?>)~i', function ($match) use (&$links) { return '<' . array_push($links, $match[1]) . '>'; }, $value);
+
+		// Extract text links for each protocol
+		foreach ((array)$protocols as $protocol) {
+				switch ($protocol) {
+						case 'http':
+						case 'https':   $value = preg_replace_callback('~(?:(https?)://([^\s<]+)|(www\.[^\s<]+?\.[^\s<]+))(?<![\.,:])~i', function ($match) use ($protocol, &$links, $attr) {
+							if ($match[1]) $protocol = $match[1];
+							$link = $match[2] ?: $match[3];
+							return '<' . array_push($links, "<a $attr href=\"$protocol://$link\">$link</a>") . '>';
+							}, $value);
+							break;
+						case 'mail':    $value = preg_replace_callback('~([^\s<]+?@[^\s<]+?\.[^\s<]+)(?<![\.,:])~', function ($match) use (&$links, $attr) { return '<' . array_push($links, "<a $attr href=\"mailto:{$match[1]}\">{$match[1]}</a>") . '>'; }, $value); break;
+						default:        $value = preg_replace_callback('~' . preg_quote($protocol, '~') . '://([^\s<]+?)(?<![\.,:])~i', function ($match) use ($protocol, &$links, $attr) { return '<' . array_push($links, "<a $attr href=\"$protocol://{$match[1]}\">{$match[1]}</a>") . '>'; }, $value); break;
+				}
+		}
+
+		// Insert all link
+		return preg_replace_callback('/<(\d+)>/', function ($match) use (&$links) { return $links[$match[1] - 1]; }, $value);
+}
+
 ?>
 
 <!-- Start K2 Item Layout -->
@@ -91,16 +133,16 @@ defined('_JEXEC') or die;
 	  <?php endif; ?>
 
 	  <?php if(!empty($this->item->fulltext)): ?>
-	  <?php if($this->item->params->get('itemIntroText')): ?>
+	  <?php /* if($this->item->params->get('itemIntroText')): ?>
 	  <!-- Item introtext -->
 	  <div class="itemIntroText">
 	  	<?php echo $this->item->introtext; ?>
 	  </div>
-	  <?php endif; ?>
+	  <?php endif; */ ?>
 	  <?php if($this->item->params->get('itemFullText')): ?>
 	  <!-- Item fulltext -->
 	  <div class="itemFullText">
-	  	<?php echo $this->item->fulltext; ?>
+	  	<?php echo linkify($this->item->fulltext, array('http', 'https', 'mail')); ?>
 		<?php
 			$view_id = JRequest::getInt('id');
 			if ($view_id > 300) $view_id -= 300;
