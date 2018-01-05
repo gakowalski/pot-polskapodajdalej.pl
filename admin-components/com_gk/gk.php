@@ -6,6 +6,8 @@ $input	= $app->input;
 
 $document = JFactory::getDocument();
 $document->addStyleSheet(DS.'administrator'.DS.'components'.DS.'com_gk'.DS.'com_gk.css');
+JHtml::_('jquery.framework');
+$document->addScript(DS.'administrator'.DS.'components'.DS.'com_gk'.DS.'com_gk.js');
 
 $task	= $input->getInt('task', 1);
 
