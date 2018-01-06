@@ -142,7 +142,7 @@ function linkify($value, $protocols = array('http', 'mail'), array $attributes =
 	  <?php if($this->item->params->get('itemFullText')): ?>
 	  <!-- Item fulltext -->
 	  <div class="itemFullText">
-	  	<?php echo linkify($this->item->fulltext, array('http', 'https', 'mail')); ?>
+	  	<?php echo linkify($this->item->fulltext); ?>
 		<?php
 			$view_id = JRequest::getInt('id');
 			if ($view_id > 300) $view_id -= 300;
