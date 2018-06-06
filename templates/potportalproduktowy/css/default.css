@@ -134,10 +134,6 @@ a{
 	color:#FF0931;
 }
 
-a:hover {
-	text-decoration:none;
-}
-
 #middleColumnMain img{
 	background:#fff;
 	border-bottom: 2px solid #ccc;
@@ -155,11 +151,6 @@ a:hover {
 	text-decoration:none;
 }
 
-.items-leading .btn:hover,
-#content a.readon:hover, #content a.readmore:hover, .k2ReadMore:hover{
-	color:#fff;
-}
-
 .subheading-category,
 #content .componentheading, #content h3{
 	border-left:3px solid #FF0931;
@@ -168,7 +159,6 @@ a:hover {
   font-size: 1.2rem;
 	margin:0 0 0.5em;
 	padding:0 0 0 1em;
-	text-transform: uppercase;
 }
 
 #middleColumn h3{
@@ -208,7 +198,6 @@ strong{
 	line-height:1.5rem;
 	overflow: hidden;
 	text-align: center;
-	text-transform:uppercase;
 	width: 100%;
 }
 
@@ -240,10 +229,6 @@ strong{
 	color:#A4A7A9;
 	padding:0 0 0 15px;
 	text-decoration:none;
-}
-
-#upperMenu a:hover{
-	color:#808080;
 }
 
 #upperMenu .item1 a{
@@ -295,7 +280,6 @@ strong{
 	display:block;
 	background-color:#FF0931;
 	color:#FFF;
-	text-transform:uppercase;
 	text-decoration:none;
 }
 
@@ -315,10 +299,6 @@ strong{
 
 #mainMenu ul li a{
 	background:none;
-}
-
-#mainMenu a:hover{
-	color:#fff;
 }
 
 /* Menu w stopce */
@@ -342,10 +322,6 @@ strong{
 #menuFooter a{
 	color:#7E7E7E;
 	text-decoration:none;
-}
-
-#menuFooter a:hover{
-	color:#555;
 }
 
 /* Search */
@@ -386,7 +362,6 @@ strong{
 	color:#FF0931;
 	font-weight:bold;
 	line-height:1em;
-	text-transform:uppercase;
 	margin-right:10px;
 }
 
@@ -428,34 +403,6 @@ strong{
 p.counter{
 	display:none;
 }
-
-.pagination{
-	padding-top:20px;
-	margin:5px 0;
-	overflow:hidden;
-	width:100%;
-}
-
-.pagitem{
-	background-color:#B1B1B1;
-	color:#fff;
-	display:block;
-	float:left;
-	font-size:1.1rem;
-	margin:0 3px;
-	padding:0.2em 0.5em;
-}
-
-span.pagitem{
-	background:none repeat scroll 0 0 #BB6620;
-	color:#FFFFFF;
-}
-
-.pagitem:hover{
-	background-color:#BB6620;
-	color:#FFFFFF;
-}
-
 
 /* Footer */
 
@@ -639,7 +586,6 @@ table.category tr{
 	font-weight:bold;
 	line-height:2.5em;
 	margin-right:20px;
-	text-transform:uppercase;
 }
 
 .contest-search{
