@@ -45,9 +45,9 @@ $body_classes =
             <div class="wrapper">
                 <table border="0" cellpadding="0" width="100%">
                     <tr align="center">
-                        <td width="33%"><a href="<?php echo JURI::base(false); ?>"><img style="margin: 5px 0px 5px 0px" src="images/stories/produktowy/logo/logo-PPD-2016.png" width="247" height="80" /></a></td>
+                        <td width="33%"><a href="<?php echo JURI::base(false); ?>"><img style="margin: 5px 0px 5px 0px" src="images/frontpage/CERTYFIKAT%202018<?php echo ($lang=="en-gb")? '-eng' : '%20PL'; ?>.png" width="247" height="91" /></a></td>
                         <td width="33%"></td>
-                        <td width="33%"><a href="https://www.msit.gov.pl/" target="_blank"><img height="60" src="//polska.travel/images/stories/polskatravel/Polska/MSIT_pl.png" alt="MSIT pl"></a></td>
+                        <td width="33%"><a href="https://www.msit.gov.pl/" target="_blank"><img src="//polska.travel/images/pl-PL/logotypy/msit_220x55.jpg" alt="MSIT pl"></a></td>
                     </tr>
                 </table>
 
