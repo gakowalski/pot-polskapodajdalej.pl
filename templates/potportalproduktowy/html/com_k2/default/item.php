@@ -160,6 +160,11 @@ function linkify($value, $protocols = array('http', 'mail'), array $attributes =
 	  </div>
 	  <?php endif; ?>
 	  <?php else: ?>
+
+			<?php if($this->item->params->get('itemVideo') && !empty($this->item->video)): ?>
+			<div class="itemVideo"><?php echo $this->item->video; ?></div>
+			<?php endif; ?>
+
 	  <!-- Item text -->
 	  <div class="itemFullText">
 	  	<?php echo $this->item->introtext; ?>

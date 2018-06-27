@@ -51,13 +51,9 @@ $body_classes =
                     </tr>
                 </table>
 
-                <div>
-                    <div id="menuMain">
-                        <!-- Main Menu -->
-                        <jdoc:include type="modules" name="menu_glowne" style="none" />
-                    </div>
+                <div id="menuMain">
+                    <jdoc:include type="modules" name="menu_glowne" style="none" />
                 </div>
-                <div class="clear"></div>
             </div>
         </div>
 
