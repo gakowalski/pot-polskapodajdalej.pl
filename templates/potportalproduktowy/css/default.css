@@ -82,11 +82,6 @@ legend{color:#000;}
 	margin-left:20px;
 }
 
-#textCont{
-	width:500px;
-	float:left;
-}
-
 #textContNoSidebar{
 	padding: 1em;
 }
@@ -96,8 +91,11 @@ legend{color:#000;}
 	margin-right:20px;
 }
 
-#content{
-	margin-bottom:20px;
+#content {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	border-radius: 25px;
+	background-color: #cecfce;
 }
 
 #slider {
@@ -206,39 +204,9 @@ strong{
 	padding-top: 30px;
 }
 
-
-/* Menu Górne */
-
 #upperMenu{
-	padding-top:5px;
+	display: none;
 }
-
-#upperMenu li{
-	display:inline;
-	font-size:1.1rem;
-	padding: 0 0 0 0.5em;
-	margin: 0 0.5em 0 0;
-}
-
-#upperMenu li.item1{
-	border:none;
-}
-
-#upperMenu a{
-	background:url(../images/icons.png) no-repeat 0 0;
-	color:#A4A7A9;
-	padding:0 0 0 15px;
-	text-decoration:none;
-}
-
-#upperMenu .item1 a{
-	background-position:0 -58px;
-}
-
-#upperMenu .item17 a{
-	background-position:0 3px;
-}
-
 
 /* Menu Główne */
 #menuMain {
@@ -299,7 +267,9 @@ strong{
 /* Menu w stopce */
 
 #footerCont{
+	background-color:#fff;
 	padding-top:10px;
+	text-align: center;
 }
 
 #menuFooter li{
@@ -371,10 +341,6 @@ p.counter{
 
 /* Footer */
 
-#footerCont{
-	background-color:#fff;
-}
-
 .copyrights{
 	font-size:1.1rem;
 	color:#7E7E7E ;
@@ -445,11 +411,6 @@ font-size:0.9rem;
 .mod_gk input, .mod_gk select {
 	margin: 15px;
 	padding: 15px;
-}
-
-#content {
-	border-radius: 25px;
-	background-color: #cecfce;
 }
 
 #product {
@@ -529,4 +490,10 @@ div.itemView {
 
 .itemVideo {
 	text-align: center;
+}
+
+#header div.logos {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }

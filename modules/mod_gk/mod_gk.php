@@ -99,6 +99,13 @@ if ($lang == 'pl') {
 
 ?>
 <div class="mod_gk">
+	<p class="mod_gk_title">
+	<?php if ($lang == 'pl'): ?>
+	Wyrusz z nami w niezwykłą podróż po Polsce, podążaj śladami certyfikowanych produktów turystycznych! Znajdź produkt turystyczny:
+	<?php else: ?>
+	Join us on a remarkable journey through Poland, follow certified tourism products! Find a tourist product:
+	<?php endif; ?>
+	</p>
 	<table border="0" cellspacing="0" width="100%">
 	<tr>
 		<td>

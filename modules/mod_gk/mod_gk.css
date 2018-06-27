@@ -1,3 +1,10 @@
 .mod_gk td {
   padding: 25px;
 }
+
+.mod_gk p.mod_gk_title {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0;
+}
