@@ -243,25 +243,25 @@ strong{
 /* Menu Główne */
 
 #mainMenu{
-	text-align:left;
+	display: flex;
 	white-space:nowrap;
 }
 
 #mainMenu li{
-	display:block;
-	float:left;
 	position:relative;
 	font-size:1.4rem;
 	margin: 0;
 }
 
 #mainMenu li ul{
-	display:block;
+	display: flex;
+	flex-direction: column;
+
 	visibility:hidden;
 	position:absolute;
 	z-index: 40000;
 	top: 2.6rem;
-	background-color:#FF0931;
+	background-color:#9e9e9e;
 }
 
 #mainMenu li:hover ul{
@@ -269,8 +269,6 @@ strong{
 }
 
 #mainMenu ul li{
-	display:block;
-	float: none;
 	font-size:1.4rem;
 	border-top:1px #fff dotted;
 	margin:0;
@@ -278,18 +276,9 @@ strong{
 
 #mainMenu a, #mainMenu li > span{
 	display:block;
-	background-color:#FF0931;
+	background-color:#9e9e9e;
 	color:#FFF;
 	text-decoration:none;
-}
-
-#mainMenu li:first-child > span {
-	-webkit-border-top-left-radius: 10px;
-	-webkit-border-bottom-left-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-bottomleft: 10px;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
 }
 
 #mainMenu li > a,

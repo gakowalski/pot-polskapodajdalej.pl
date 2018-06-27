@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
-<extension version="3.1" type="template" client="site" method="upgrade">
+<extension version="3.[789]" type="template" client="site" method="upgrade">
 		<name>POT portal produktowy</name>
-		<version>1.0.7</version>
-		<creationDate>2017-07-10</creationDate>
+		<version>1.0.8</version>
+		<creationDate>2018-06-27</creationDate>
 		<author>grzegorz.kowalski@pot.gov.pl</author>
 		<authorOriginal>bh</authorOriginal>
 		<authorEmail>grzegorz.kowalski@pot.gov.pl</authorEmail>
@@ -25,8 +25,6 @@
 			<position>menu_glowne</position>
 			<position>slider</position>
 			<position>search</position>
-			<position>column_right</position>
-			<position>column_left</position>
 			<position>footer</position>
       <position>debug</position>
 		</positions>

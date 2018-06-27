@@ -51,8 +51,8 @@ $body_classes =
                     </tr>
                 </table>
 
-                <div class="fright">
-                    <div id="menuMain" class="right">
+                <div>
+                    <div id="menuMain">
                         <!-- Main Menu -->
                         <jdoc:include type="modules" name="menu_glowne" style="none" />
                     </div>
@@ -79,29 +79,10 @@ $body_classes =
 
 
         <div id="content" class="wrapper">
-
-            <?php if ($this->countModules('column_left')): ?>
-                <div id="leftColumn" class="fleft">
-
-                    <!-- Lewa kolumna -->
-                    <jdoc:include type="modules" name="column_left" style="none" />
-
-                </div>
-            <?php endif; ?>
-
-            <?php if ($this->countModules('column_right')): ?>
-                <div id="rightColumn" class="fright">
-
-                    <!-- Prawa kolumna -->
-                    <jdoc:include type="modules" name="column_right" style="none" />
-
-                </div>
-            <?php endif; ?>
-
-            <div id="textCont<?php if (!$this->countModules('column_left | column_right')) echo 'NoSidebar'; ?>">
+            <div id="textContNoSidebar">
                 <jdoc:include type="component" style="none" />
             </div>
-            <div class="clear"><!-- Clear line --></div>
+            <div class="clear"></div>
         </div>
 
         <div id="footerCont">
@@ -120,15 +101,5 @@ $body_classes =
         </div>
 
         <jdoc:include type="modules" name="debug" />
-
-        <script type="text/javascript" src="https://crm.pot.gov.pl/ScriptProvider"></script>
-        <script type="text/javascript">
-            POTCounter.PreventDefault();
-            POTCounter.OnPageLoad(function () {
-                POTCounter.ActionURL = "https://crm.pot.gov.pl/SaveActivity";
-                POTCounter.SetPageToken("619f94d9-7583-424b-b3f6-77fe6b87d715");
-                POTCounter.SendInfo();
-            });
-        </script>
     </body>
 </html>
