@@ -142,7 +142,14 @@ function linkify($value, $protocols = array('http', 'mail'), array $attributes =
 	  <?php if($this->item->params->get('itemFullText')): ?>
 	  <!-- Item fulltext -->
 	  <div class="itemFullText">
-	  	<?php echo linkify($this->item->fulltext); ?>
+			<?php
+				$text .= '';
+				if (JRequest::getInt('id') >= 276 && JRequest::getInt('id') <=286) {
+					echo linkify(str_replace('<td id="fulltext">', '<td id="fulltext">'.$this->item->introtext.' ', $this->item->fulltext));
+				} else {
+					echo linkify($this->item->fulltext);
+				}
+			 ?>
 		<?php
 			$view_id = JRequest::getInt('id');
 			if ($view_id > 300) $view_id -= 300;

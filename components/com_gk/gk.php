@@ -52,8 +52,10 @@ if ($view_id) {
 	$results = $db->loadAssocList('id');
 
 	foreach ($results as $result) {
+		echo '<div class="gk_single_item">';
 		echo '<h2><a href="'. JRouteLangFix(JRoute::_('index.php?option=com_k2&view=item&layout=item&id='.$result['id'])) .'">'.$result['title'].'</a></h2>';
-		echo '<div id="introtext">'.$result['introtext'].'</div>';
+		echo '<div class="introtext">'.$result['introtext'].'</div>';
+		echo '</div>';
 		if ($readon) echo '<p><a href="'. JRouteLangFix(JRoute::_('index.php?option=com_k2&view=item&layout=item&id='.$result['id'])) .'" class="readon">Więcej&hellip;</a></p>';
 	}
 }

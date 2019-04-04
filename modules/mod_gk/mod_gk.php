@@ -148,7 +148,7 @@ if ($lang == 'pl') {
 		<!-- <option value="0">(wybierz rok)</option> -->
 		<option value="0">(<?php echo ($lang == 'pl')? 'rok' : 'year';?>)</option>
 	<?php
-		for ($value = 2017; $value > 2002; $value--) {
+		for ($value = 2018; $value > 2002; $value--) {
 			if ($value == $year) {
 				echo "<option value='$value' selected>$value</option>";
 			} else {
