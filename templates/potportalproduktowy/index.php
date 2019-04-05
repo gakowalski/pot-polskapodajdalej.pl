@@ -43,8 +43,8 @@ $body_classes =
 
     <body id="home" class="<?php echo $body_classes; ?>">
         <div id="header">
-            <div class="wrapper">
-                <div class="logos">
+            <div>
+                <div class="logos wrapper">
                   <div><a href="https://polskapodajdalej.pl/"><img style="margin: 8px 0px 8px 0px" src="/images/frontpage/CERTYFIKAT%202018%20PL.png" width="247" height="91"></a></div>
                   <div><a href="https://www.msit.gov.pl/" target="_blank"><img src="//polska.travel/images/pl-PL/logotypy/msit_220x55.jpg" alt="MSIT pl"></a></div>
                 </div>
@@ -57,7 +57,9 @@ $body_classes =
 
         <?php if ($frontpage_enabled): ?>
         <div id="video" class="wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/8Hn1C2kPU4U?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+          <iframe id="ytplayer" type="text/html" width="720" height="405"
+          src="https://www.youtube.com/embed/8Hn1C2kPU4U?autoplay=1&disablekb=1&loop=1"
+          frameborder="0" allowfullscreen></iframe>
         </div>
         <?php endif; ?>
 
@@ -77,13 +79,14 @@ $body_classes =
           </div>
         <?php endif; ?>
 
-
+        <?php if ($frontpage_enabled === false): ?>
         <div id="content" class="wrapper">
             <div id="textContNoSidebar">
                 <jdoc:include type="component" style="none" />
             </div>
             <div class="clear"></div>
         </div>
+        <?php endif; ?>
 
         <div id="footerCont">
             <div class="wrapper">
