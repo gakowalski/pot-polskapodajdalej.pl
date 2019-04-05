@@ -33,7 +33,7 @@ legend{color:#000;}
 /*main classes*/
 
 .wrapper{
-	width: 960px;
+	max-width: 960px;
 	margin: 0 auto;
 	clear: both;
 }
@@ -212,6 +212,7 @@ strong{
 /* Menu Główne */
 #menuMain {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
   align-items: baseline;
 	background-color: #766;
@@ -220,6 +221,7 @@ strong{
 #mainMenu{
 	display: flex;
 	white-space:nowrap;
+	flex-wrap: wrap;
 }
 
 #mainMenu li{
@@ -409,8 +411,8 @@ font-size:0.9rem;
 }
 
 #product {
-	line-height: 17px;
-	border-spacing: 25px;
+	line-height: 1rem;
+	border-spacing: 2rem;
 }
 
 #introtext>p {
@@ -419,7 +421,7 @@ font-size:0.9rem;
 }
 
 #fulltext {
-	padding: 10px;
+	padding: 1rem;
 	text-align: justify;
 }
 
