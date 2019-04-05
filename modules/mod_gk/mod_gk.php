@@ -109,15 +109,6 @@ if ($lang == 'pl') {
 	<table border="0" cellspacing="0" width="100%">
 	<tr>
 		<td>
-			<?php if ($lang == 'pl'): ?>
-			<a href="https://pdf.polska.travel/najlepsze_produkty_turystyczne_pl">
-			<?php else: ?>
-			<a href="https://pdf.polska.travel/best_2008-2015_en">
-			<?php endif; ?>
-			<img src="images/stories/produktowy/okladka_<?php echo ($lang == 'pl')? 'pl' : 'en'; ?>-200.jpg" />
-			</a>
-		</td>
-		<td>
 	<form action="<?php echo JRoute::_('index.php');?>" method="GET">
 	<input type="hidden" name="option" value="com_gk" />
 	<input type="hidden" name="catid" value="<?php echo ($lang == 'pl')? 19 : 23; ?>" />

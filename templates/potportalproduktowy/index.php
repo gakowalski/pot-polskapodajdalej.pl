@@ -21,7 +21,7 @@ $this->setGenerator(null);
 $this->setHtml5(true);
 $this->setBase('');
 
-$doc->addStyleSheet($template_path . '/css/default.css');
+$doc->addStyleSheet($template_path . '/css/default.css?v=' . filemtime('templates/'.$this->template.'/css/default.css'));
 //$doc->addScript($template_path . '/js/default.js');
 $body_classes =
   'site '
@@ -37,6 +37,7 @@ $body_classes =
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="data:;base64,iVBORw0KGgo=">
         <jdoc:include type="head" />
     </head>
 
@@ -53,6 +54,12 @@ $body_classes =
                 </div>
             </div>
         </div>
+
+        <?php if ($frontpage_enabled): ?>
+        <div id="video" class="wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/8Hn1C2kPU4U?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+        <?php endif; ?>
 
         <?php if ($this->countModules('slider')): ?>
         <div id="slider" class="wrapper">

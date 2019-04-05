@@ -1,5 +1,5 @@
 .mod_gk td {
-  padding: 25px;
+  padding: 2rem;
 }
 
 .mod_gk p.mod_gk_title {
@@ -7,4 +7,9 @@
   text-align: center;
   font-size: 1.2em;
   margin: 0;
+}
+
+.mod_gk input, .mod_gk select {
+	margin: 1rem;
+	padding: 1rem;
 }

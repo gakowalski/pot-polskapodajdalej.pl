@@ -92,10 +92,14 @@ legend{color:#000;}
 }
 
 #content {
-	margin-top: 30px;
-	margin-bottom: 20px;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	border-radius: 25px;
 	background-color: #cecfce;
+}
+
+body.frontpage #content {
+	display: none;
 }
 
 #slider {
@@ -183,6 +187,7 @@ strong{
 
 #header{
 	background-color:#fff;
+	margin-bottom: 3rem;
 }
 
 .moduletable_welcome{
@@ -408,11 +413,6 @@ font-size:0.9rem;
 	font-weight: bold;
 }
 
-.mod_gk input, .mod_gk select {
-	margin: 15px;
-	padding: 15px;
-}
-
 #product {
 	line-height: 17px;
 	border-spacing: 25px;
@@ -499,5 +499,9 @@ div.itemView {
 }
 
 .gk_single_item {
-	
+
+}
+
+#video {
+	text-align: center;
 }
